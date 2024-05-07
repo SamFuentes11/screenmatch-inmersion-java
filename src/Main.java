@@ -6,14 +6,13 @@ public class Main {
         //System.out.println("Película Matrix");
 
         // Declaración de variables
-        String nombre = "Matrix";
+        String nombre = "Star Wars Ep. III: La Venganza de los Sith";
         String sinopsis = """
-                La mejor película de ciencia ficción y tecnología del último milenio.
+                La mejor película de ciencia ficción y acción intergaláctica de todos los tiempos.
                 """;
-        int fechaDeLanzamiento = 1999;
-        double evaluacion = 5;
+        int fechaDeLanzamiento = 2005;
+        double evaluacion = 4.7;
         boolean incluidaEnElPlanBasico = true;
-        double mediaEvaluacionUsuario = 0;
 
         System.out.println("Película: " + nombre);
         System.out.println("Sinópsis: " + sinopsis);
@@ -30,12 +29,25 @@ public class Main {
             System.out.println("Película Retro que vale la pena ver.");
         }
 
-        for (int i = 0; i < 3; i++) {
+        double mediaEvaluacionUsuario = 0;
+        // Utilizando ciclo While
+        int i = 0;
+        while (i < 3) {
             Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa la nota que le darias a Matrix");
+            System.out.println("Ingresa la nota que le darias a " + nombre);
             double notaPelicula = teclado.nextDouble();
             mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaPelicula;
+            i++;
         }
+
+        /*
+        // Utilizando ciclo For
+        for (int i = 0; i < 3; i++) {
+            Scanner teclado = new Scanner(System.in);
+            System.out.println("Ingresa la nota que le darias a " + nombre);
+            double notaPelicula = teclado.nextDouble();
+            mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaPelicula;
+        }*/
         System.out.println("La media de la película " +
                 nombre + " calculada por el usuario es: " + mediaEvaluacionUsuario / 3);
     }
